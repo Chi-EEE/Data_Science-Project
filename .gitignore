@@ -1,4 +1,5 @@
-*.csv
+CR/out/*.csv
+CR/data/out/battle_dataset/*.csv
 !card_data.csv
 
 # Byte-compiled / optimized / DLL files
