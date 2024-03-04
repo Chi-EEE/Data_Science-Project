@@ -40,8 +40,8 @@
     <br>
     <br>
 </form>
-{% if prediction == [1] %}
+{% if prediction == 1 %}
 <h2>You are likely to have Heart Disease</h2>
-{% else %}
+{% elif prediction == 0 %}
 <h2>You are unlikely to have Heart Disease</h2>
 {% endif %}
