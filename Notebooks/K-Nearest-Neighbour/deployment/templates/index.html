@@ -1,39 +1,39 @@
 <h1>Heart Disease Prediction</h1>
 <form method="post">
     <label for="age">Age:</label><br>
-    <input type="number" id="age" name="age" min="1" max="140" required>
+    <input type="number" id="age" name="age" value="{{ request.form['age'] }}" min="1" max="140" required>
     <br>
     <br>
     <label for="height">Height (cm):</label><br>
-    <input type="number" id="height" name="height" min="1" required>
+    <input type="number" id="height" name="height" value="{{ request.form['height'] }}" min="1" required>
     <br>
     <br>
     <label for="weight">Weight (kg):</label><br>
-    <input type="number" id="weight" name="weight" min="0" required>
+    <input type="number" id="weight" name="weight" value="{{ request.form['weight'] }}" min="0" required>
     <br>
     <br>
     <label for="systolic">Systolic:</label><br>
-    <input type="number" id="systolic" name="systolic" min="0" required>
+    <input type="number" id="systolic" name="systolic" value="{{ request.form['systolic'] }}" min="0" required>
     <br>
     <br>
     <label for="diastolic">Diastolic:</label><br>
-    <input type="number" id="diastolic" name="diastolic" min="0" required>
+    <input type="number" id="diastolic" name="diastolic" value="{{ request.form['diastolic'] }}" min="0" required>
     <br>
     <br>
     <label for="cholesterol">Cholesterol(mg/dL):</label><br>
-    <input type="number" id="cholesterol" name="cholesterol" min="0" required>
+    <input type="number" id="cholesterol" name="cholesterol" value="{{ request.form['cholesterol'] }}" min="0" required>
     <br>
     <br>
     <label for="glucose">Glucose(mg/dL):</label><br>
-    <input type="number" id="glucose" name="glucose" min="0" required>
+    <input type="number" id="glucose" name="glucose" value="{{ request.form['glucose'] }}" min="0" required>
     <br>
     <br>
     <label for="smoker">Smoker:</label><br>
-    <input type="checkbox" id="smoker" name="smoker">
+    <input type="checkbox" name="smoker" {% if request.form.get('smoker') == 'on' %}checked{% endif %}>
     <br>
     <br>
     <label for="exercise">Exercise(hours/week):</label><br>
-    <input type="number" id="exercise" name="exercise" min="0" required>
+    <input type="number" id="exercise" name="exercise" value="{{ request.form['exercise'] }}" min="0" required>
     <br>
     <br>
     <input type="submit" value="Submit">
